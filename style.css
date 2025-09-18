@@ -1,0 +1,222 @@
+/* Reset e estilo geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Lora', serif;
+    text-align: center; 
+    background-color: rgb(245, 233, 200); 
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header { 
+    background-color: #fff; 
+    color: #333; 
+    padding: 20px;
+    font-size: 24px; 
+    font-family: 'Playfair Display', serif; 
+    letter-spacing: 1px; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    border-bottom: 2px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Contêiner para a barra de pesquisa e o botão do carrinho */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Barra de pesquisa */
+#barraPesquisa {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    width: 250px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+#barraPesquisa::placeholder {
+    color: #bbb;
+}
+
+#barraPesquisa:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 8px rgba(230, 126, 34, 0.5);
+}
+
+/* Botão do carrinho */
+#abrirCarrinho {
+    background-color: #e67e22; 
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#abrirCarrinho:hover {
+    background-color: #f39c12;
+    transform: scale(1.05);
+}
+
+/* Carrinho fixo na lateral */
+.carrinho { 
+    background-color: #fff; 
+    padding: 20px; 
+    position: fixed; 
+    right: 10px; 
+    top: 50px; 
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #ddd; 
+    display: none;
+}
+
+.carrinho ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carrinho li {
+    font-size: 18px;
+    color: #7f8c8d; 
+    margin-bottom: 12px;
+}
+
+.carrinho button {
+    background-color: #e67e22; 
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carrinho button:hover {
+    background-color: #f39c12; 
+    transform: scale(1.05); 
+}
+
+#total-carrinho {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button { 
+    background: #e67e22; 
+    border: none; 
+    padding: 12px 20px; 
+    cursor: pointer; 
+    font-size: 18px;
+    border-radius: 8px;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #f39c12;
+    transform: scale(1.05); 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #abrirCarrinho {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .carrinho {
+        width: 260px;
+        top: 40px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    #barraPesquisa {
+        width: 200px;
+    }
+}
+
+/* Estilização dos produtos */
+.container { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.produto { 
+    border: 1px solid #ddd; 
+    padding: 20px; 
+    width: calc(100% - 40px);
+    max-width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.produto:hover {
+    transform: translateY(-5px); 
+}
+/* Alinhamento do ícone do Instagram */
+.instagram-icon {
+    margin-left: 10px; /* Distância entre o título e o ícone */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+@media (max-width: 480px) {
+    .produto {
+        width: calc(100% - 20px);
+    }
+}

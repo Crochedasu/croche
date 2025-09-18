@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crochê da su🧶</title>
+    <!-- Link para a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Crochê da Su 
+            <a href="https://www.instagram.com/croochedasu_" target="_blank">
+                <!-- Ícone clássico do Instagram usando Font Awesome -->
+                <i class="fab fa-instagram" style="color: #FFA500; font-size: 30px;"></i>
+            </a>
+        </h1>
+        <h6>"Feito a mão, com amor e sofisticação"</h6>
+        <div class="header-actions">
+            <input type="text" id="barraPesquisa" placeholder="Pesquisar produto...">
+            <button id="abrirCarrinho">
+                <!-- Ícone da sacola de compras -->
+                <i class="fas fa-shopping-bag" style="font-size: 30px;"></i>
+            </button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="produtos-container">
+            <h2>Nossos Produtos</h2>
+            
+            <div class="container" id="produtos">
+                <!-- Produtos serão inseridos aqui via JavaScript -->
+            </div>
+        </section>
+        
+        <aside class="carrinho" id="carrinho">
+            <button id="fecharCarrinho">❌ Fechar</button>
+            <h2>🛒 Meu Carrinho</h2>
+            <p id="total-carrinho"></p>
+            <ul id="lista-carrinho"></ul>
+            <button class="btn whatsapp" onclick="pagarWhatsApp()">Pagar pelo WhatsApp</button>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Crochê da Su | Feito com 💖</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
